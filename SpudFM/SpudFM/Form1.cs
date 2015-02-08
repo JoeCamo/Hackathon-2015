@@ -26,11 +26,70 @@ namespace SpudFM
             searchBar.Text = "Enter Search Here";
         }
 
-        /*   Misc Functions           */
+        /*  KeyboardShortcutFunctions  */
+        #region KeyboardShortcutFunctions
+        private void mainForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            string letterPressed = "";
 
-        /*   End Misc Functions       */
+            if (e.Control && !e.Shift && !e.Alt && !IsModifierKey(e.KeyCode))
+            {
+                letterPressed = GetLetterOfKeyPress(e);
+                MessageBox.Show(("ctrl+" + letterPressed).ToLower());
+            }
+            else if (!e.Control && e.Shift && !e.Alt && !IsModifierKey(e.KeyCode))
+            {
+                letterPressed = GetLetterOfKeyPress(e);
+                MessageBox.Show(("shift+" + letterPressed).ToLower());
+
+            }
+            else if (!e.Control && !e.Shift && e.Alt && !IsModifierKey(e.KeyCode))
+            {
+                letterPressed = GetLetterOfKeyPress(e);
+                MessageBox.Show(("alt+" + letterPressed).ToLower());
+            }
+            else if (e.Control && e.Shift && !e.Alt && !IsModifierKey(e.KeyCode))
+            {
+                letterPressed = GetLetterOfKeyPress(e);
+                MessageBox.Show(("ctrl+shift+" + letterPressed).ToLower());
+            }
+
+            else if (!e.Control && e.Shift && e.Alt && !IsModifierKey(e.KeyCode))
+            {
+                letterPressed = GetLetterOfKeyPress(e);
+                MessageBox.Show(("alt+shift+" + letterPressed).ToLower());
+            }
+            else if (e.Control && !e.Shift && e.Alt && !IsModifierKey(e.KeyCode))
+            {
+                letterPressed = GetLetterOfKeyPress(e);
+                MessageBox.Show(("ctrl+alt+" + letterPressed).ToLower());
+            }
+        }
+
+        private string GetLetterOfKeyPress(KeyEventArgs e)
+        {
+            return e.KeyCode.ToString();
+        }
+
+        private bool IsModifierKey(Keys key)
+        {
+            bool status = false;
+            string keyStr = key.ToString();
+            if (keyStr == "ShiftKey" ||
+                keyStr == "ControlKey" ||
+                keyStr == "Menu")
+            {
+                status = true;
+            }
+            return status;
+        }
+
+
+        #endregion
+
 
         /*   Search Bar Functions     */
+        #region SearchBarFunctions
         private void onSearchFocus(object sender, EventArgs e)
         {
             if (searchBar.Text == "Enter Search Here")
@@ -48,9 +107,18 @@ namespace SpudFM
         {
             searchHighlighted = false;
         }
+        #endregion
+
+        
 
         /*   End Search Bar Functions     */
 
+        /*   Misc Functions           */
+        #region MiscFunctions
+        
+
+        
+        #endregion
 
     }
 }
