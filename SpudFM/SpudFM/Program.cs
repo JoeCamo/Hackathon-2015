@@ -12,6 +12,7 @@ namespace SpudFM
         /// The main entry point for the application.
         /// </summary>
         /// my comment - AJ
+        /// test comment Gabe
         [STAThread]
         static void Main()
         {
