@@ -4,9 +4,8 @@ using System.Data.SQLite;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.SQLite;
 
-namespace CSharpTest
+namespace SpudFM
 {
     class DatabaseHandler
     {
