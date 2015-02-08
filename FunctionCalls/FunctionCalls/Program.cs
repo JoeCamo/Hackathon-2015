@@ -13,7 +13,7 @@ namespace FunctionCalls
             parser p = new parser();
             functions f = new functions(p.get_user_def);
 
-            //f.ReturnAndRunFunc("lol");
+            f.ReturnAndRunFunc("lol");
             Console.ReadLine();
         }
     }
