@@ -50,9 +50,9 @@ namespace SpudFM
                 {
                     dict[s.Substring(9)] = "CYCLETAB";
                 }
-                else if ( string.Compare(s, 0, "CYCTLETABBW", 0, 10) == 0)
+                else if ( string.Compare(s, 0, "BWCYCLETAB", 0, 10) == 0)
                 {
-                    dict[s.Substring(11)] = "CYCLETABBW";
+                    dict[s.Substring(11)] = "BWCYCLETAB";
                 }
                 else if ( string.Compare(s, 0, "UPFOLDER", 0, 8) == 0)
                 {
@@ -68,7 +68,7 @@ namespace SpudFM
                 }
                 else if ( string.Compare(s, 0, "PASTEFILE", 0, 9) == 0)
                 {
-                    dict[s.Substring(10)] = "PASTEFILE";
+                    dict[s.Substring(10).Trim()] = "PASTEFILE";
                 }
                 else
                 {

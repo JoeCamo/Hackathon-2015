@@ -110,7 +110,8 @@ namespace SpudFM
         }
         private string mySubStr(string s, int start, int end)
         {
-            char[] newString = new char[1024];
+            //char[] newString = new char[256];
+            StringBuilder sb = new StringBuilder();
             string ns;
             int i = 0;
 
@@ -119,12 +120,13 @@ namespace SpudFM
                 // skip whitespaces
                 if ( s[start] == '\n' )
                 {
+                    //sb.Append(s[start]);
                     start++;
                 }
                 // turn \r to ,
                 else if (s[start] == '\r')
                 {
-                    newString[i] = ',';
+                    sb.Append(',');// newString[i] = ',';
                     start++;
                     i++;
                 }
@@ -138,14 +140,15 @@ namespace SpudFM
                 }
                 else
                 {
-                    newString[i] = s[start];
+                    sb.Append(s[start]);
+                    //newString[i] = s[start];
                     start++;
                     i++;
                 }
             }
 
-            ns = new string(newString);
-            return ns;
+            //ns = new string(newString);
+            return sb.ToString();
         }
     }
 }

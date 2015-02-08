@@ -16,7 +16,7 @@ userdef:
 NEWTAB@ctrl+t
 CLOSETAB@ctrl+w
 CYCLETAB@ctrl+tab
-CYCLETABBW@ctrl+shift+tab
+BWCYCLETAB@ctrl+shift+tab
 UPFOLDER@ctrl+e
 COPYSTRING@ctrl+shift+c
 COPYFILE@ctrl+c

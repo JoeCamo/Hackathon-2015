@@ -17,3 +17,4 @@ C:\Users\anthony\Desktop\Hacks\Hackathon-2015\SpudFM\SpudFM\bin\Debug\System.Dat
 C:\Users\anthony\Desktop\Hacks\Hackathon-2015\SpudFM\SpudFM\obj\Debug\SpudFM.mainForm.resources
 C:\Users\anthony\Desktop\Hacks\Hackathon-2015\SpudFM\SpudFM\obj\Debug\SpudFM.Properties.Resources.resources
 C:\Users\anthony\Desktop\Hacks\Hackathon-2015\SpudFM\SpudFM\obj\Debug\SpudFM.csproj.GenerateResource.Cache
+C:\Users\anthony\Desktop\Hacks\Hackathon-2015\SpudFM\SpudFM\obj\Debug\SpudFM.csprojResolveAssemblyReference.cache
