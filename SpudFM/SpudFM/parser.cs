@@ -110,7 +110,7 @@ namespace SpudFM
         }
         private string mySubStr(string s, int start, int end)
         {
-            char[] newString = new char[128];
+            char[] newString = new char[1024];
             string ns;
             int i = 0;
 

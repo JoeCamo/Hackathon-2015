@@ -1,0 +1,23 @@
+folders:
+C:\users\test
+;klfjsad;lkfjsalkdjf;lksfaj;lkdsfa
+C:\Program Files
+C:\Yay!
+
+columns:
+File Name
+; test comenetsdlkfjsd;fjslasjdflk;ajsflkdjlsafdfsasfsafdsfs
+; jlkda;jflkdsj;lkfjd;lksaf
+;;laskdsjflkdsjf;lds
+Size
+File Type
+
+userdef:
+NEWTAB@ctrl+t
+CLOSETAB@ctrl+w
+CYCLETAB@ctrl+tab
+CYCLETABBW@ctrl+shift+tab
+UPFOLDER@ctrl+e
+COPYSTRING@ctrl+shift+c
+COPYFILE@ctrl+c
+PASTEFILE@ctrl+v

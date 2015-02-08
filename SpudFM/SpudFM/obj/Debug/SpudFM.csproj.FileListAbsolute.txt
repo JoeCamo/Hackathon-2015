@@ -1,0 +1,10 @@
+C:\Users\Collier\Desktop\newHackathonRepo\Hackathon-2015\SpudFM\SpudFM\bin\Debug\SpudFM.exe.config
+C:\Users\Collier\Desktop\newHackathonRepo\Hackathon-2015\SpudFM\SpudFM\obj\Debug\SpudFM.csprojResolveAssemblyReference.cache
+C:\Users\Collier\Desktop\newHackathonRepo\Hackathon-2015\SpudFM\SpudFM\obj\Debug\SpudFM.mainForm.resources
+C:\Users\Collier\Desktop\newHackathonRepo\Hackathon-2015\SpudFM\SpudFM\obj\Debug\SpudFM.Properties.Resources.resources
+C:\Users\Collier\Desktop\newHackathonRepo\Hackathon-2015\SpudFM\SpudFM\obj\Debug\SpudFM.csproj.GenerateResource.Cache
+C:\Users\Collier\Desktop\newHackathonRepo\Hackathon-2015\SpudFM\SpudFM\bin\Debug\SpudFM.exe
+C:\Users\Collier\Desktop\newHackathonRepo\Hackathon-2015\SpudFM\SpudFM\bin\Debug\SpudFM.pdb
+C:\Users\Collier\Desktop\newHackathonRepo\Hackathon-2015\SpudFM\SpudFM\bin\Debug\System.Data.SQLite.dll
+C:\Users\Collier\Desktop\newHackathonRepo\Hackathon-2015\SpudFM\SpudFM\obj\Debug\SpudFM.exe
+C:\Users\Collier\Desktop\newHackathonRepo\Hackathon-2015\SpudFM\SpudFM\obj\Debug\SpudFM.pdb
