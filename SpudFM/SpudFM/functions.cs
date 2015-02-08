@@ -24,7 +24,11 @@ namespace SpudFM
 
         public void ReturnAndRunFunc(string key)
         {
-            fHandlers(this, new FunctionEvent(dict[key]));
+            if (dict.ContainsKey(key))
+            {
+                fHandlers(this, new FunctionEvent(dict[key]));
+            }
+            
         }
 
         private void udefparse(List<string> udefs)
@@ -36,35 +40,35 @@ namespace SpudFM
             {
                 if ( string.Compare(s, 0, "NEWTAB", 0, 6) == 0 )
                 {
-                    dict[s.Substring(s.Length - 7)] = "NEWTAB";
+                    dict[s.Substring(7)] = "NEWTAB";
                 }
                 else if ( string.Compare(s, 0, "CLOSETAB", 0, 8) == 0)
                 {
-                    dict[s.Substring(s.Length - 9)] = "CLOSETAB";
+                    dict[s.Substring(9)] = "CLOSETAB";
                 }
                 else if ( string.Compare(s, 0, "CYCLETAB", 0, 8) == 0)
                 {
-                    dict[s.Substring(s.Length - 9)] = "CYCLETAB";
+                    dict[s.Substring(9)] = "CYCLETAB";
                 }
                 else if ( string.Compare(s, 0, "CYCTLETABBW", 0, 10) == 0)
                 {
-                    dict[s.Substring(s.Length - 11)] = "CYCLETABBW";
+                    dict[s.Substring(11)] = "CYCLETABBW";
                 }
                 else if ( string.Compare(s, 0, "UPFOLDER", 0, 8) == 0)
                 {
-                    dict[s.Substring(s.Length - 9)] = "UPFOLDER";
+                    dict[s.Substring(9)] = "UPFOLDER";
                 }
                 else if ( string.Compare(s, 0, "COPYSTRING", 0, 10) == 0)
                 {
-                    dict[s.Substring(s.Length - 11)] = "COPYSTRING";
+                    dict[s.Substring(11)] = "COPYSTRING";
                 }
                 else if ( string.Compare(s, 0, "COPYFILE", 0, 8) == 0)
                 {
-                    dict[s.Substring(s.Length - 9)] = "COPYFILE";
+                    dict[s.Substring(9)] = "COPYFILE";
                 }
                 else if ( string.Compare(s, 0, "PASTEFILE", 0, 9) == 0)
                 {
-                    dict[s.Substring(s.Length - 10)] = "PASTEFILE";
+                    dict[s.Substring(10)] = "PASTEFILE";
                 }
                 else
                 {

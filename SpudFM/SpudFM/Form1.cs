@@ -31,9 +31,35 @@ namespace SpudFM
         {
             p = new parser();
             f = new functions(p.get_user_def);
+            tabbedCDirs.Add(@"C:\");
 
+            f.fHandlers += f_fHandlers;
             
             searchBar.Text = "Enter Search Here";
+        }
+
+        void f_fHandlers(object sender, EventArgs e)
+        {
+            FunctionEvent f = e as FunctionEvent;
+
+            if (f.Text == "NEWTAB")
+                newTab();
+            else if (f.Text == "CLOSETAB")
+                closeCurrentTab();
+            else if (f.Text == "CYCLETAB")
+                nextTab();
+            else if (f.Text == "CYCLETABBW")
+                lastTab();
+            else if (f.Text == "UPFOLDER")
+                upADir();
+            else if (f.Text == "COPYSTRING")
+                MessageBox.Show("DO WORK DAMNIT");
+            else if (f.Text == "COPYFILE")
+                MessageBox.Show("LAZY ASS FUCKS");
+            else if (f.Text == "PASTEFILE")
+                MessageBox.Show("oh well lol");
+            else
+                ;
         }
 
         /*  KeyboardShortcutFunctions  */
@@ -45,34 +71,40 @@ namespace SpudFM
             if (e.Control && !e.Shift && !e.Alt && !IsModifierKey(e.KeyCode))
             {
                 letterPressed = GetLetterOfKeyPress(e);
-                MessageBox.Show(("ctrl+" + letterPressed).ToLower());
+                f.ReturnAndRunFunc("ctrl+" + (e.KeyCode.ToString().ToLower()));
+                //MessageBox.Show(("ctrl+" + letterPressed).ToLower());
             }
             else if (!e.Control && e.Shift && !e.Alt && !IsModifierKey(e.KeyCode))
             {
                 letterPressed = GetLetterOfKeyPress(e);
-                MessageBox.Show(("shift+" + letterPressed).ToLower());
+                f.ReturnAndRunFunc("shift+" + (e.KeyCode.ToString().ToLower()));
+                //MessageBox.Show(("shift+" + letterPressed).ToLower());
 
             }
             else if (!e.Control && !e.Shift && e.Alt && !IsModifierKey(e.KeyCode))
             {
                 letterPressed = GetLetterOfKeyPress(e);
+                f.ReturnAndRunFunc("alt+" + (e.KeyCode.ToString().ToLower()));
                 MessageBox.Show(("alt+" + letterPressed).ToLower());
             }
             else if (e.Control && e.Shift && !e.Alt && !IsModifierKey(e.KeyCode))
             {
                 letterPressed = GetLetterOfKeyPress(e);
-                MessageBox.Show(("ctrl+shift+" + letterPressed).ToLower());
+                f.ReturnAndRunFunc("ctrl+shift+" + (e.KeyCode.ToString().ToLower()));
+                //MessageBox.Show(("ctrl+shift+" + letterPressed).ToLower());
             }
 
             else if (!e.Control && e.Shift && e.Alt && !IsModifierKey(e.KeyCode))
             {
                 letterPressed = GetLetterOfKeyPress(e);
-                MessageBox.Show(("alt+shift+" + letterPressed).ToLower());
+                f.ReturnAndRunFunc("alt+shift+" + (e.KeyCode.ToString().ToLower()));
+                //MessageBox.Show(("alt+shift+" + letterPressed).ToLower());
             }
             else if (e.Control && !e.Shift && e.Alt && !IsModifierKey(e.KeyCode))
             {
                 letterPressed = GetLetterOfKeyPress(e);
-                MessageBox.Show(("ctrl+alt+" + letterPressed).ToLower());
+                f.ReturnAndRunFunc("ctrl+alt+" + (e.KeyCode.ToString().ToLower()));
+                //MessageBox.Show(("ctrl+alt+" + letterPressed).ToLower());
             }
         }
 
@@ -129,7 +161,7 @@ namespace SpudFM
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            tabbedCDirs.Add(@"C:\Users\Collier\Dropbox");
+            tabbedCDirs.Add(@"C:\Users\");
         }
 
         private void newTab()
@@ -140,7 +172,7 @@ namespace SpudFM
             tabControl1.SelectedTab = createdTabPage;
 
             //add new current dir for new 
-            tabbedCDirs.Add(@"C:\Users\Collier");
+            tabbedCDirs.Add(@"C:\Users\");
 
             updateTab();
         }

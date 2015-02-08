@@ -14,7 +14,6 @@ C:\Users\anthony\Desktop\Hacks\Hackathon-2015\SpudFM\SpudFM\obj\Debug\SpudFM.pdb
 C:\Users\anthony\Desktop\Hacks\Hackathon-2015\SpudFM\SpudFM\bin\Debug\SpudFM.exe
 C:\Users\anthony\Desktop\Hacks\Hackathon-2015\SpudFM\SpudFM\bin\Debug\SpudFM.pdb
 C:\Users\anthony\Desktop\Hacks\Hackathon-2015\SpudFM\SpudFM\bin\Debug\System.Data.SQLite.dll
-C:\Users\anthony\Desktop\Hacks\Hackathon-2015\SpudFM\SpudFM\obj\Debug\SpudFM.csprojResolveAssemblyReference.cache
 C:\Users\anthony\Desktop\Hacks\Hackathon-2015\SpudFM\SpudFM\obj\Debug\SpudFM.mainForm.resources
 C:\Users\anthony\Desktop\Hacks\Hackathon-2015\SpudFM\SpudFM\obj\Debug\SpudFM.Properties.Resources.resources
 C:\Users\anthony\Desktop\Hacks\Hackathon-2015\SpudFM\SpudFM\obj\Debug\SpudFM.csproj.GenerateResource.Cache

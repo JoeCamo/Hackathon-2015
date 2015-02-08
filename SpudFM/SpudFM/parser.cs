@@ -93,7 +93,7 @@ namespace SpudFM
             lf = f.Split(',').ToList<string>();
             lu = u.Split(',').ToList<string>();
 
-            foreach( string item in lc )
+            /*foreach( string item in lc )
             {
                 Console.WriteLine(item);
             }
@@ -106,7 +106,7 @@ namespace SpudFM
             foreach(string item in lu )
             {
                 Console.WriteLine(item);
-            }
+            }*/
         }
         private string mySubStr(string s, int start, int end)
         {
