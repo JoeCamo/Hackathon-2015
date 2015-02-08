@@ -13,9 +13,13 @@ namespace SpudFM
     public partial class mainForm : Form
     {
         private bool searchHighlighted = false;
+        parser p;
+        functions f;
+
         public mainForm()
         {
             InitializeComponent();
+
             this.searchBar.GotFocus += onSearchFocus;
             this.searchBar.LostFocus += offSearchFocus;
 
@@ -23,6 +27,10 @@ namespace SpudFM
 
         private void mainForm_Load(object sender, EventArgs e)
         {
+            p = new parser();
+            f = new functions(p.get_user_def);
+
+            
             searchBar.Text = "Enter Search Here";
         }
 
